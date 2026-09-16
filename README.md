@@ -32,17 +32,22 @@ Os roteadores foram configurados com senhas criptografadas para impedir que usu�
 Montagem da rede:
 Primeiro, foram adicionados 13 pcs, 3 laptop, 5 switch, 2 roteador e 1 servidor.
 Conectei cada Pc ao switch da sua rede utilizando cabos diretos. Depois, conectei os switchs aos roteadores e os roteadores ao switch da rede TI/Suporte, que também possui conexão com o servidor DHCP.
+
 Configurei os roteadores com um hostname e uma senha
+
 Roteador1
 Hostname: cisco senha: cisco
 Roteador2
  Hostname: cisco2 senha: cisco2
+ 
 Nos roteadores as portas ligadas ao switch do TI estavam desligadas, fui em CLI > digitei o comando nome da porta e depois dei “No shutdown” > Deu conectividade.
 Despois nos roteadores configurei endereços IPs para o roteador1 e para roteador2 conectado ao switch do TI 
 Roteador1 IP: 192.168.0.1 Máscara de sub-rede: 255.255.255.0
 Roteador2 IP: 192.168.0.2 Máscara de sub-rede: 255.255.255.0
 Agora os roteadores conseguem se comunicar com a rede TI
+
 Configuração DHCP:
+
 No servidor, fui em desktop > ip configuration para configurar um IP ao meu servidor DHCP
 DHCP IP: 192.168.0.10 Máscara de sub-rede: 255.255.255.0
 Gateway:192.168.0.1
