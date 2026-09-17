@@ -42,11 +42,11 @@ Conectei cada Pc ao switch da sua rede utilizando cabos diretos. Depois, conecte
 
 Configurei os roteadores com um `hostname` e uma `senha`.
 
-- Roteador1
-Hostname: cisco senha: cisco
+- `Roteador1
+Hostname`: cisco senha: cisco
 
-- Roteador2
- Hostname: cisco2 senha: cisco2
+- `Roteador2
+ Hostname`: cisco2 senha: cisco2
  
 Nos roteadores as portas ligadas ao switch do TI estavam desligadas, fui em CLI > digitei o comando nome da porta e depois dei “No shutdown” > Deu conectividade.
 
