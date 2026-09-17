@@ -72,11 +72,16 @@ Agora os roteadores conseguem se comunicar com a rede TI
 
 - depois add > save para salvar a pool do TI
 
-Fiz o mesmo para as outras redes:
-Atendimento: 192.168.1.3 a 192.168.1.20 
-RH: 192.168.2.3 a 192.168.2.20
-Administrativo: 192.168.3.3 a 192.168.3.20 
-Financeiro: 192.168.4.3 a 192.168.4.20 
+**Fiz o mesmo para as outras redes:**
+
+- Atendimento: 192.168.1.3 a 192.168.1.20 
+
+- RH: 192.168.2.3 a 192.168.2.20
+
+- Administrativo: 192.168.3.3 a 192.168.3.20 
+
+- Financeiro: 192.168.4.3 a 192.168.4.20 
+
 Após configurar as pool para cada rede poderem receber seus endereços IPs.
 Configurando Vlans: 
 Depois, configurei uma VLAN para cada rede e suas respectivas interfaces VLAN
