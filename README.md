@@ -58,14 +58,20 @@ Despois nos roteadores configurei endereços IPs para o roteador1 e para roteado
 
 Agora os roteadores conseguem se comunicar com a rede TI
 
-Configuração DHCP:
+**Configuração DHCP**
 
-No servidor, fui em desktop > ip configuration para configurar um IP ao meu servidor DHCP
-DHCP IP: 192.168.0.10 Máscara de sub-rede: 255.255.255.0
-Gateway:192.168.0.1
-Depois do IP configuration > services > DHCP e deixei a configuração do DHCP ligada.
-O DHCP está configurado para atribui endereços ips ao TI partir de: 192.168.0.3 a 192.168.0.20 
-depois add > save para salvar a pool do TI
+- No servidor, fui em desktop > ip configuration para configurar um IP ao meu servidor DHCP
+
+- DHCP IP: 192.168.0.10 Máscara de sub-rede: 255.255.255.0
+
+- Gateway padrão:192.168.0.1
+
+- Depois do IP configuration > services > DHCP e deixei a configuração do DHCP ligada.
+
+- O DHCP está configurado para atribui endereços ips ao TI partir de: 192.168.0.3 a 192.168.0.20  
+
+- depois add > save para salvar a pool do TI
+
 Fiz o mesmo para as outras redes:
 Atendimento: 192.168.1.3 a 192.168.1.20 
 RH: 192.168.2.3 a 192.168.2.20
