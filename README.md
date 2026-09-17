@@ -27,14 +27,18 @@ A rede foi dividida em diferentes sub-redes para permitir a organização e a co
 
 o servidor foi configurado para distribuir endereços IPs de forma automática através do DHCP, incluindo informações como:  
 `IPs`, `Gateway padrão` e `Máscara de sub-rede`.
+
 Foram utilizados dois roteadores para separar os domínios de broadcast.
 
-Os switches e os roteadores foram configurados através do CLI, com endereços IP para se comunicarem dentro da rede como: IPs e Máscara de sub-rede.
-Os roteadores foram configurados com senhas criptografadas para impedir que usuários não autorizados tenham acesso.
+Os switches e os roteadores foram configurados através do `CLI`, com `endereços IP` para se comunicarem dentro da rede como: `IPs e Máscara de sub-rede`.
 
-Montagem da rede:
+Os roteadores foram configurados com senhas para impedir que usuários não autorizados tenham acesso.
+
+##Montagem da rede##
+
 Primeiro, foram adicionados 13 pcs, 3 laptop, 5 switch, 2 roteador e 1 servidor.
-Conectei cada Pc ao switch da sua rede utilizando cabos diretos. Depois, conectei os switchs aos roteadores e os roteadores ao switch da rede TI/Suporte, que também possui conexão com o servidor DHCP.
+
+Conectei cada Pc ao switch da sua rede utilizando cabos diretos. Depois, conectei os switchs aos roteadores e os roteadores ao switch da rede `TI/Suporte`, que também possui conexão com o `servidor DHCP`.
 
 Configurei os roteadores com um hostname e uma senha
 
