@@ -34,7 +34,7 @@ Os switches e os roteadores foram configurados através do `CLI`, com `endereço
 
 Os roteadores foram configurados com senhas para impedir que usuários não autorizados tenham acesso.
 
-##Montagem da rede##
+## Montagem da rede
 
 Primeiro, foram adicionados 13 pcs, 3 laptop, 5 switch, 2 roteador e 1 servidor.
 
