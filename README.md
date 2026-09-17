@@ -1,7 +1,7 @@
 # Uma-rede-pequena-Packet-Tracer
 Prática de configuração de uma rede pequena utilizando o Cisco Packet Tracer(em andamento).
 
-## Construindo uma pequena rede
+### Construindo uma pequena rede
 
 ## As tecnologias e ferramentas utilizadas foram:
 Packet Tracer
@@ -13,7 +13,7 @@ Packet Tracer
 Cabos diretos
 Cabos cruzado
 
-## Sua topologia:
+## Sua topologia
 
 A rede é composta por pcs, laptops, switchs, roteadores, servidor e cabos. A topologia foi dividida em 5 setores:
 
