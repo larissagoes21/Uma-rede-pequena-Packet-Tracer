@@ -86,40 +86,57 @@ Após configurar as pool para cada rede poderem receber seus endereços IPs.
 
 **Configurando Vlans**
 
-Depois, configurei uma VLAN para cada rede e suas respectivas interfaces VLAN
+Depois, configurei uma `VLAN` para cada rede e suas respectivas `interfaces VLAN`
 
-enable >  configure terminal > interface vlan número da vlan >ip address endereço IP > ip helper-address 192.168.0.10 > no shutdown
+`enable` **>** `configure terminal` **>** interface vlan número da vlan **>** `ip address` *endereço IP* **>** `ip helper-address` 192.168.0.10 **>** `no shutdown`
 
-Configurei cada vlan com um ip helper-address para encaminhar as solicitações DHCP das redes diferentes da rede do servidor para o servidor DHCP.
+Configurei cada `vlan` com um `ip helper-address` para encaminhar as `solicitações DHCP` das redes diferentes da rede do servidor para o `servidor DHCP`.
 
 Depois de fazer com que cada vlan tenha um endereço IP, acessei o atendimento e fiz testes para saber se estava funcionando, após concluir o funcionamento fiz o mesmo com os outros 2 pcs na rede atendimento. 
 
 E repeti o processo no RH, mas os IPs que do dhcp que estavam aparecendo são do atendimento.
 
-Para corrigir esse erro antes fiz o comando show vlan brief para saber qual era o problema na interface Vlan
+Para corrigir esse erro antes fiz o comando `show vlan brief` para saber qual era o problema na interface Vlan
+
 A interface vlan do RH estava dando na porta vlan1 e isso fez que a rede RH recebesse IPs da rede atendimento
- Para corrigir esse erro usei comandos como: 
+
+ **Para corrigir esse erro usei comandos como:** 
  
- switchport mode access e switchport access vlan 2 para voltar para portas certas
+ `switchport mode access` e `switchport access vlan 2` para voltar para portas certas
 
-Como esperado o RH começou a receber os endereços certos: 192.168.2.0/24
+Como esperado o RH começou a receber os endereços certos: **192.168.2.0/24**
 
-Repeti o mesmo processo de configuração nas demais VLANs.
-Ao configurar o administrativo 192.168.3.1 no pc 6 mas apresentou uma falha.
- fui investigar isso configurei temporiamente um ip estático no pc 6: 192.168.3.4 Depois utilizei um PDU para acompanhar a comunicação entre o PC e o servidor DHCP no modo Simulation.
- A solicitação chegava ao servidor mas quando voltava. o pacote chegava ao Roteador 1, que não possuía uma rota para a rede 192.168.3.0/24. Dessa forma, o pacote não conseguia retornar corretamente ao PC.
-para resolver esse problema eu adicionei uma rota para o endereço ip com o comando ip route 192.168.3.0 255.255.255.0 192.168.0.2
-também adicionei rotas do roteador1 para o roteador2 e vice-versa e das redes de cada roteador 
+Repeti o mesmo processo de configuração nas demais `VLANs`.
+
+Ao configurar o administrativo `192.168.3.1` no `PC 6` mas apresentou uma falha.
+
+ fui investigar isso configurei temporiamente um `ip estático` no `pc 6: 192.168.3.4` Depois utilizei um **PDU** para acompanhar a comunicação entre o PC e o servidor DHCP no **modo Simulation**.
+ 
+ A solicitação chegava ao servidor mas quando voltava. o pacote chegava ao Roteador 1, que não possuía uma rota para a rede `192.168.3.0/24.` Dessa forma, o pacote não conseguia retornar corretamente ao PC.
+ 
+para resolver esse problema eu adicionei uma **rota** para o endereço ip com o comando `ip route 192.168.3.0 255.255.255.0 192.168.0.2`
+
+também adicionei `rotas` do **roteador1** para o **roteador2** e vice-versa e das redes de cada roteador.
+
 Após as correções, o DHCP passou a funcionar corretamente na rede Administrativa.
-Testes:
+
+# Testes:
+
 Realizei testes de conectividade utilizando o comando ping entre PCs e seus respectivos gateways.
+
 Testei a comunicação entre PC e servidor DHCP.
+
 Depois, realizei testes de comunicação entre dispositivos de redes diferentes.
+
 Um dos testes foi realizado entre um PC do Financeiro e um PC do Atendimento. O teste de ping foi concluído com sucesso, demonstrando que os dispositivos de redes diferentes conseguiam se comunicar através dos roteadores.
+
 Testei o caminho do PDU do Administrativo até o servidor e identificou o problema de rota. 
 
 Também utilizei o Simulation Mode do Packet Tracer para acompanhar o caminho dos pacotes durante os testes.
-Resultado:
+
+# Resultado:
+
 Após as configurações e correções, os PCs conseguiram obter automaticamente seus endereços IP através do servidor DHCP e se comunicar com dispositivos de outras redes.
+
 Como resultado, consegui montar e configurar uma pequena rede composta por 13 PCs, 3 laptops, 5 switches, 2 roteadores e 1 servidor DHCP, colocando em prática conceitos de endereçamento IP, DHCP, VLANs, gateways, roteamento, comunicação entre redes e troubleshooting.
 
