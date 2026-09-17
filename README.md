@@ -40,11 +40,12 @@ Primeiro, foram adicionados 13 pcs, 3 laptop, 5 switch, 2 roteador e 1 servidor.
 
 Conectei cada Pc ao switch da sua rede utilizando cabos diretos. Depois, conectei os switchs aos roteadores e os roteadores ao switch da rede `TI/Suporte`, que também possui conexão com o `servidor DHCP`.
 
-Configurei os roteadores com um hostname e uma senha
+Configurei os roteadores com um `hostname` e uma `senha`.
 
-Roteador1
+- Roteador1
 Hostname: cisco senha: cisco
-Roteador2
+
+- Roteador2
  Hostname: cisco2 senha: cisco2
  
 Nos roteadores as portas ligadas ao switch do TI estavam desligadas, fui em CLI > digitei o comando nome da porta e depois dei “No shutdown” > Deu conectividade.
