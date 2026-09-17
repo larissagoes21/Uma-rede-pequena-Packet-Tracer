@@ -135,6 +135,5 @@ Também utilizei o Simulation Mode do Packet Tracer para acompanhar o caminho do
 # Resultado:
 
 Após as configurações e correções, os PCs conseguiram obter automaticamente seus endereços IP através do servidor DHCP e se comunicar com dispositivos de outras redes.
-
 Como resultado, consegui montar e configurar uma pequena rede composta por 13 PCs, 3 laptops, 5 switches, 2 roteadores e 1 servidor DHCP, colocando em prática conceitos de endereçamento IP, DHCP, VLANs, gateways, roteamento, comunicação entre redes e troubleshooting.
 
