@@ -26,7 +26,7 @@ A rede foi dividida em diferentes sub-redes para permitir a organização e a co
 ## Configuração da rede: 
 
 o servidor foi configurado para distribuir endereços IPs de forma automática através do DHCP, incluindo informações como:  
-'IPs', 'Gateway padrão' e 'Máscara de sub-rede'.
+`IPs`, `Gateway padrão` e `Máscara de sub-rede`.
 Foram utilizados dois roteadores para separar os domínios de broadcast.
 
 Os switches e os roteadores foram configurados através do CLI, com endereços IP para se comunicarem dentro da rede como: IPs e Máscara de sub-rede.
