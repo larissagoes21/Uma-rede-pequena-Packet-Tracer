@@ -76,7 +76,7 @@ Agora os roteadores conseguem se comunicar com a rede TI
 
 - **Atendimento**: 192.168.1.3 a 192.168.1.20 
 
-- *RH***: 192.168.2.3 a 192.168.2.20
+- **RH**: 192.168.2.3 a 192.168.2.20
 
 - **Administrativo**: 192.168.3.3 a 192.168.3.20 
 
@@ -87,13 +87,20 @@ Após configurar as pool para cada rede poderem receber seus endereços IPs.
 **Configurando Vlans**
 
 Depois, configurei uma VLAN para cada rede e suas respectivas interfaces VLAN
+
 enable >  configure terminal > interface vlan número da vlan >ip address endereço IP > ip helper-address 192.168.0.10 > no shutdown
+
 Configurei cada vlan com um ip helper-address para encaminhar as solicitações DHCP das redes diferentes da rede do servidor para o servidor DHCP.
+
 Depois de fazer com que cada vlan tenha um endereço IP, acessei o atendimento e fiz testes para saber se estava funcionando, após concluir o funcionamento fiz o mesmo com os outros 2 pcs na rede atendimento. 
+
 E repeti o processo no RH, mas os IPs que do dhcp que estavam aparecendo são do atendimento.
+
 Para corrigir esse erro antes fiz o comando show vlan brief para saber qual era o problema na interface Vlan
 A interface vlan do RH estava dando na porta vlan1 e isso fez que a rede RH recebesse IPs da rede atendimento
- Para corrigir esse erro usei comandos como: switchport mode access e switchport access vlan 2 para voltar para portas certas
+ Para corrigir esse erro usei comandos como: 
+ 
+ switchport mode access e switchport access vlan 2 para voltar para portas certas
 
 Como esperado o RH começou a receber os endereços certos: 192.168.2.0/24
 
