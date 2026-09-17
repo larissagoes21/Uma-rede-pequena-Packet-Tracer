@@ -74,16 +74,18 @@ Agora os roteadores conseguem se comunicar com a rede TI
 
 **Fiz o mesmo para as outras redes:**
 
-- Atendimento: 192.168.1.3 a 192.168.1.20 
+- **Atendimento**: 192.168.1.3 a 192.168.1.20 
 
-- RH: 192.168.2.3 a 192.168.2.20
+- *RH***: 192.168.2.3 a 192.168.2.20
 
-- Administrativo: 192.168.3.3 a 192.168.3.20 
+- **Administrativo**: 192.168.3.3 a 192.168.3.20 
 
-- Financeiro: 192.168.4.3 a 192.168.4.20 
+- **Financeiro**: 192.168.4.3 a 192.168.4.20 
 
 Após configurar as pool para cada rede poderem receber seus endereços IPs.
-Configurando Vlans: 
+
+**Configurando Vlans**
+
 Depois, configurei uma VLAN para cada rede e suas respectivas interfaces VLAN
 enable >  configure terminal > interface vlan número da vlan >ip address endereço IP > ip helper-address 192.168.0.10 > no shutdown
 Configurei cada vlan com um ip helper-address para encaminhar as solicitações DHCP das redes diferentes da rede do servidor para o servidor DHCP.
