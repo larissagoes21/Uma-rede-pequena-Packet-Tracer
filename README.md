@@ -23,7 +23,7 @@ A rede é composta por pcs, laptops, switchs, roteadores, servidor e cabos. A to
 
 A rede foi dividida em diferentes sub-redes para permitir a organização e a comunicação entre os setores.
 
-## Configuração da rede: 
+## Configuração da rede
 
 o servidor foi configurado para distribuir endereços IPs de forma automática através do DHCP, incluindo informações como:  
 `IPs`, `Gateway padrão` e `Máscara de sub-rede`.
@@ -82,13 +82,11 @@ Agora os roteadores conseguem se comunicar com a rede TI
 
 - **Financeiro**: 192.168.4.3 a 192.168.4.20 
 
-Após configurar as pool para cada rede poderem receber seus endereços IPs.
-
 **Configurando Vlans**
 
 Depois, configurei uma `VLAN` para cada rede e suas respectivas `interfaces VLAN`
 
-`enable` **>** `configure terminal` **>** interface vlan número da vlan **>** `ip address` *endereço IP* **>** `ip helper-address` 192.168.0.10 **>** `no shutdown`
+`enable` **>** `configure terminal` **>** interface vlan *número da vlan* **>** `ip address` *endereço IP* **>** `ip helper-address` 192.168.0.10 **>** `no shutdown`
 
 Configurei cada `vlan` com um `ip helper-address` para encaminhar as `solicitações DHCP` das redes diferentes da rede do servidor para o `servidor DHCP`.
 
