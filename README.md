@@ -49,9 +49,13 @@ Hostname: cisco senha: cisco
  Hostname: cisco2 senha: cisco2
  
 Nos roteadores as portas ligadas ao switch do TI estavam desligadas, fui em CLI > digitei o comando nome da porta e depois dei “No shutdown” > Deu conectividade.
+
 Despois nos roteadores configurei endereços IPs para o roteador1 e para roteador2 conectado ao switch do TI 
-Roteador1 IP: 192.168.0.1 Máscara de sub-rede: 255.255.255.0
-Roteador2 IP: 192.168.0.2 Máscara de sub-rede: 255.255.255.0
+
+- `Roteador1 IP`: 192.168.0.1 Máscara de sub-rede: 255.255.255.0
+
+- `Roteador2 IP`: 192.168.0.2 Máscara de sub-rede: 255.255.255.0
+
 Agora os roteadores conseguem se comunicar com a rede TI
 
 Configuração DHCP:
